@@ -13,3 +13,21 @@ La columna `fotos.imagen` acepta tanto nombres de archivos locales (por ejemplo,
 `10.png`, resueltos desde `img/`) como URLs absolutas públicas de Vercel Blob.
 Las URLs absolutas se renderizan directamente; no deben volver a prefijarse con
 `img/`.
+
+## Eliminacion de imagenes
+
+El listado y el detalle permiten retirar una imagen mediante una solicitud
+`POST` confirmada por el usuario. La accion elimina el registro de `fotos`, pero
+no borra el archivo de `img/`: esos archivos son assets versionados y el
+filesystem de Vercel es de solo lectura durante la ejecucion.
+
+El detalle de reglas e impacto se encuentra en
+`docs/prds/02-eliminacion_imagenes.md`.
+
+## Tests
+
+Ejecuta las pruebas nativas del flujo de eliminacion con:
+
+```bash
+php tests/eliminacion_test.php
+```
