@@ -68,5 +68,11 @@ function actualizarFoto(PDO $conexion, int $id, string $titulo, string $texto): 
 
 function imageUrl(string $filename): string
 {
+    // Blob stores the public URL in the database. Do not treat it as a local
+    // filename or it becomes /img/https%3A/... in the rendered HTML.
+    if (filter_var($filename, FILTER_VALIDATE_URL)) {
+        return $filename;
+    }
+
     return 'img/' . implode('/', array_map('rawurlencode', explode('/', $filename)));
 }

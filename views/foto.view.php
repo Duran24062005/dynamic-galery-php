@@ -12,6 +12,7 @@
         }
         ?>
     </title>
+    <link rel="icon" href="<?php echo htmlspecialchars(imageUrl($foto['imagen']), ENT_QUOTES, 'UTF-8'); ?>" type="image/png">
     <link rel="shortcut icon" href="<?php echo htmlspecialchars(imageUrl($foto['imagen']), ENT_QUOTES, 'UTF-8'); ?>" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
