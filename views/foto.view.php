@@ -12,7 +12,7 @@
         }
         ?>
     </title>
-    <link rel="shortcut icon" href="img/<?php echo $foto['imagen']; ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo htmlspecialchars(imageUrl($foto['imagen']), ENT_QUOTES, 'UTF-8'); ?>" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
 
     <section class="contenedor">
         <div class="foto">
-            <img src="img/<?php echo $foto['imagen']; ?>" alt="<?php echo $foto['text']; ?>">
+            <img src="<?php echo htmlspecialchars(imageUrl($foto['imagen']), ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($foto['text'], ENT_QUOTES, 'UTF-8'); ?>">
             <p class="texto"><?php echo $foto['text']; ?></p>
             <div class="paginacion">
                 <a href="index.php" class="izquierda"><i class="fa fa-arrow-left"></i> Atras</a>

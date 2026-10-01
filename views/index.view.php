@@ -35,7 +35,7 @@
             <?php foreach ($fotos as $foto) : ?>
                 <div class="foto">
                     <a href="foto.php?id=<?php echo $foto['id']; ?>">
-                        <img src="img/<?php echo $foto['imagen']; ?>" alt="<?php echo $foto['text']; ?>">
+                        <img src="<?php echo htmlspecialchars(imageUrl($foto['imagen']), ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($foto['text'], ENT_QUOTES, 'UTF-8'); ?>">
                     </a>
                 </div>
             <?php endforeach; ?>
