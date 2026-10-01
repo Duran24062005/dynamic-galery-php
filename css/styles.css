@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* styles.css */
+
+body {
+    /* font-family: "EB Garamond"; */
+    margin: 0;
+    padding: 0;
+    background-color: #c6c9ca;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.shadow {
+    position: relative;
+    top: 30px;
+    left: 8rem;
+    right: 8rem;
+    background-color: yellow;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
+}
+h1 {
+    color: #080707;
+    position: relative;
+    top: -18px;
+}
+
+.agregar {
+    display: flex;
+    justify-content: end;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1rem;
+}
+.agregar a {
+    text-decoration: none;
+    border: 1px solid #080707;
+    border-radius: 5px;
+    padding: 4px;
+    color: #080707;
+    background-color: yellow;
+}
+
+.agregar a:hover {
+    background-color: #080707;
+    color: #fff;
+    transform: scale(1.1);
+    border-radius: 2rem;
+}
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.foto a img{
+    width: 150px;
+    border: 3px solid #575a60;
+    box-shadow: 3px 0px 3px #080707;
+    border-radius: 1rem;
+}
+
+.foto a img:hover {
+    transform: scale(1.1);
+    border: 3px solid yellow;
+    box-shadow: 3px 0px 3px #424040;
+    border-radius: 2rem;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.paginacion a {
+    text-decoration: none;
+    border: 1px solid #080707;
+    border-radius: 5px;
+    padding: 4px;
+    color: #080707;
+    background-color: yellow;
+}
+
+.paginacion a:hover {
+    background-color: #080707;
+    color: #fff;
+    transform: scale(1.1);
+    border-radius: 2rem;
+}
+
+
+.izquierda {
+    margin-left: 3rem;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #080707;
+    color: #fff;
+    padding: 1rem;
+}
+ .nombre {
+    color: yellow;
+ }
