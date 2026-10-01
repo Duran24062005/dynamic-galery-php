@@ -29,6 +29,10 @@
         </div>
     </header>
 
+    <?php if ($eliminada): ?>
+        <p class="mensaje-exito" role="status">La imagen fue eliminada de la galeria.</p>
+    <?php endif; ?>
+
 
     <section class="fotos">
         <div class="contenedor">
@@ -38,6 +42,12 @@
                     <a href="foto.php?id=<?php echo $foto['id']; ?>">
                         <img src="<?php echo htmlspecialchars(imageUrl($foto['imagen']), ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($foto['text'], ENT_QUOTES, 'UTF-8'); ?>">
                     </a>
+                    <form action="eliminar.php" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar esta imagen de la galeria?');">
+                        <input type="hidden" name="id" value="<?php echo (int) $foto['id']; ?>">
+                        <button type="submit" class="boton-eliminar" aria-label="Eliminar imagen">
+                            <i class="fa-solid fa-trash"></i> Eliminar
+                        </button>
+                    </form>
                 </div>
             <?php endforeach; ?>
 

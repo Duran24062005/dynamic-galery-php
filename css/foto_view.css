@@ -84,6 +84,24 @@ p {
     border-radius: 2rem;
 }
 
+.paginacion form {
+    display: inline;
+    margin: 3rem;
+}
+
+.boton-eliminar {
+    border: 1px solid #8b0000;
+    border-radius: 5px;
+    padding: 4px 8px;
+    color: #fff;
+    background-color: #b22222;
+    cursor: pointer;
+}
+
+.boton-eliminar:hover {
+    background-color: #080707;
+}
+
 .izquierda {
     margin-left: 3rem;
 }

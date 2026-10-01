@@ -66,6 +66,14 @@ function actualizarFoto(PDO $conexion, int $id, string $titulo, string $texto): 
     ]);
 }
 
+function eliminarFoto(PDO $conexion, int $id): bool
+{
+    $statement = $conexion->prepare('DELETE FROM fotos WHERE id = :id');
+    $statement->execute([':id' => $id]);
+
+    return $statement->rowCount() > 0;
+}
+
 function imageUrl(string $filename): string
 {
     // Blob stores the public URL in the database. Do not treat it as a local

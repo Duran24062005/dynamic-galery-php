@@ -42,6 +42,10 @@
             <p class="texto"><?php echo $foto['text']; ?></p>
             <div class="paginacion">
                 <a href="index.php" class="izquierda"><i class="fa fa-arrow-left"></i> Atras</a>
+                <form action="eliminar.php" method="post" onsubmit="return confirm('¿Seguro que deseas eliminar esta imagen de la galeria?');">
+                    <input type="hidden" name="id" value="<?php echo (int) $foto['id']; ?>">
+                    <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i> Eliminar imagen</button>
+                </form>
             </div>
         </div>
 

@@ -6,6 +6,7 @@ require __DIR__ . '/funciones.php';
 
 $perPage = 9;
 $pagina_actual = max(1, (int) ($_GET['p'] ?? 1));
+$eliminada = isset($_GET['deleted']) && $_GET['deleted'] === '1';
 $conexion = conexion();
 
 if (!$conexion) {
